@@ -1,6 +1,6 @@
 {
   "name": "shop-project",
-  "home": "https://github.com/KathyVira/react-shop",
+  "homepage": "https://github.com/KathyVira/react-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
