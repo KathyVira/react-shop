@@ -1,14 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ShopContext } from '../context'
 
-function Item(props) {
-  const {
-    id,
-    name,
-    description,
-    price,
-    full_background,
-    addToBasket = Function.prototype,
-  } = props
+function GoodsItem(props) {
+  const { id, name, description, price, full_background } = props
+
+  const { addToBasket } = useContext(ShopContext)
   return (
     <div className="card">
       <div className="card-image">
@@ -37,4 +33,4 @@ function Item(props) {
   )
 }
 
-export { Item }
+export { GoodsItem }

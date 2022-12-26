@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { ShopContext } from '../context'
 
-function Alert(props) {
-  const { name = '', hendlerCloseAllert = Function.prototype } = props
+function Alert() {
+  const {
+    alertName: name = '',
+    hendlerCloseAllert = Function.prototype,
+  } = useContext(ShopContext)
   useEffect(() => {
     const timerId = setTimeout(hendlerCloseAllert, 3000)
     return () => {
